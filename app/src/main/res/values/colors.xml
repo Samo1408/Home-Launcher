@@ -1,0 +1,6 @@
+<resources>
+    <color name="scrim">#80000000</color>
+    <color name="surface">#22FFFFFF</color>
+    <color name="onSurface">#FFFFFFFF</color>
+    <color name="icon_bg">#1A0A2E</color>
+</resources>
