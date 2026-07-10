@@ -1,0 +1,16 @@
+<resources>
+    <style name="Theme.HomeLauncher" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- DO NOT use windowTranslucent* — those force a system gradient
+             scrim under the status / navigation bars. We draw edge-to-edge
+             ourselves via WindowCompat.setDecorFitsSystemWindows(false) and
+             keep the bars fully transparent. -->
+        <item name="android:windowShowWallpaper">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackground">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:enforceStatusBarContrast">false</item>
+        <item name="android:enforceNavigationBarContrast">false</item>
+    </style>
+</resources>
