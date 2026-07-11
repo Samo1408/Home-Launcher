@@ -2,4 +2,24 @@
 <resources>
     <item name="icon_tag" type="id"/>
     <item name="desktopTouchTag" type="id"/>
+    <item name="root" type="id"/>
+    <item name="homeContent" type="id"/>
+    <item name="desktopPager" type="id"/>
+    <item name="desktopPageIndicator" type="id"/>
+    <item name="drawerPager" type="id"/>
+    <item name="pageIndicator" type="id"/>
+    <item name="widgetClock" type="id"/>
+    <item name="widgetDate" type="id"/>
+    <item name="widgetExtra" type="id"/>
+    <item name="drawer" type="id"/>
+    <item name="drawerHeader" type="id"/>
+    <item name="openDrawer" type="id"/>
+    <item name="closeDrawer" type="id"/>
+    <item name="sortDrawer" type="id"/>
+    <item name="refreshDrawer" type="id"/>
+    <item name="settingsBtn" type="id"/>
+    <item name="tabPersonal" type="id"/>
+    <item name="tabWork" type="id"/>
+    <item name="folderTitle" type="id"/>
+    <item name="folderPreview" type="id"/>
 </resources>
