@@ -6,12 +6,12 @@ plugins {
 
 android {
     namespace = "com.homelauncher.prime"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.homelauncher.prime"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 552
         versionName = "5.5.2"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
