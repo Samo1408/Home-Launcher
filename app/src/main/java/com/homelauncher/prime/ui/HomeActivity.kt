@@ -106,8 +106,8 @@ class HomeActivity : AppCompatActivity() {
 
     private fun renderDesktop() {
         val ids = DesktopStore.getShortcutIds(this)
-        val entries = apps.filter { ids.contains(it.id) }.map { DesktopAdapter.Entry.Shortcut(it) }
-        desktopPager.adapter = DesktopAdapter(entries, { a, v -> AppGridAdapter.launch(this, a, v) }, { _, _ -> })
+        val desktopApps = if (ids.isNotEmpty()) apps.filter { ids.contains(it.id) } else apps
+        desktopPager.adapter = DesktopAdapter(desktopApps, { a, v -> AppGridAdapter.launch(this, a, v) }, { _, _ -> })
     }
 
     private fun renderDrawer(work: Boolean) {
@@ -153,7 +153,7 @@ class HomeActivity : AppCompatActivity() {
                 dragStartY = ev.y; dragStartX = ev.x; dragStartProgress = dragProgress
                 dragActivated = false; dragCandidate = if (drawer.visibility == View.VISIBLE) 2 else 1
             }
-            MotionEvent.ACTION_MOVE -> {
+            MotionEvent.ACTION_MOVE  -> {
                 if (dragCandidate == 0) return
                 val dy = ev.y - dragStartY
                 if (!dragActivated) {
