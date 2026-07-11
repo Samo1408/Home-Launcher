@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="selection_remove_folder">Remove from folder</string>
+    <string name="selection_uninstall">Uninstall</string>
+    <string name="selection_done">Done</string>
+    <string name="sort_by_name">Sort by name</string>
+    <string name="sort_by_install_new">Newest first</string>
+    <string name="sort_by_install_old">Oldest first</string>
+    <string name="app_name">Home Launcher</string>
+</resources>
