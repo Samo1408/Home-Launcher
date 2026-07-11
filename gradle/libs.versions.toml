@@ -2,9 +2,13 @@
 agp = "8.9.2"
 android-gradle-plugin = "8.9.2"
 kotlin-android = "2.1.20"
+room = "2.6.1"
 
 [libraries]
-androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "age" }
-androidx-core-ktx = { group = "androide.core", name = "core-ktx", version = "1.15.0" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "agp" }
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version = "1.15.0" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version = "2.2.0" }
 material = { group = "com.google.android.material", name = "material", version = "1.12.0" }
+room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }

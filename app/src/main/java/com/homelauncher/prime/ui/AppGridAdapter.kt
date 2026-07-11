@@ -13,6 +13,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.homelauncher.prime.R
 import com.homelauncher.prime.data.AppItem
+import com.homelauncher.prime.util.FontManager
 import com.homelauncher.prime.util.IconCache
 
 class AppGridAdapter(
@@ -22,7 +23,10 @@ class AppGridAdapter(
     private val iconSizeDp: Int = 56
 ) : RecyclerView.Adapter<AppGridAdapter.VH>() {
 
-    class VH(v: View) : RecyclerView.ViewHolder(v) { val icon: ImageView = v.findViewById(R.id.icon); val label: TextView = v.findViewById(R.id.label) }
+    class VH(v: View) : RecyclerView.ViewHolder(v) {
+        val icon: ImageView = v.findViewById(R.id.icon)
+        val label: TextView = v.findViewById(R.id.label)
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VH {
         return VH(LayoutInflater.from(parent.context).inflate(R.layout.item_app, parent, false))
@@ -36,7 +40,7 @@ class AppGridAdapter(
         h.icon.layoutParams = h.icon.layoutParams.apply { width = px; height = px }
         IconCache.load(h.itemView.context, item, h.icon)
         h.label.text = item.label
-        val tf = com.homelauncher.prime.util.FontManager.getCurrentTypeface(h.itemView.context)
+        val tf = FontManager.getCurrentTypeface(h.itemView.context)
         if (tf != android.graphics.Typeface.DEFAULT) h.label.typeface = tf
         h.itemView.setOnClickListener { view -> pressAnim(view) { onClick(item, h.itemView) } }
         h.itemView.setOnLongClickListener { onLongClick(item, h.itemView); true }
