@@ -7,6 +7,7 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "cached_apps", indices = [Index("package_name"), Index("user_serial")])
 data class CachedApp(
+
     @PrimaryKey val id: String,
     @ColumnInfo(name = "package_name") val packageName: String,
     @ColumnInfo(name = "component_name") val componentName: String,
