@@ -139,7 +139,7 @@ class HomeActivity : AppCompatActivity() {
             addListener(object : AnimatorListenerAdapter() {
                 override fun onAnimationEnd(animation: Animator) { if (target <= 0f) drawer.visibility = View.GONE }
             })
-        }.also { dragAnimator = it; start() }
+        }.also { dragAnimator = it; it.start() }
     }
 
     override fun dispatchTouchEvent(ev: MotionEvent): Boolean {
