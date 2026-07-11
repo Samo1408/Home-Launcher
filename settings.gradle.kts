@@ -2,15 +2,17 @@ pluginManagement {
     repositories {
         google()
         mavenCentral()
+        gradlePluginPortal()
     }
 }
 
 dependencyResolutionManagement {
-    repositoryMode = RepositoryMode.FAIL_ON_PROJECT_REPOS
-    versionCatalogs {
-        create(libs)
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
     }
 }
 
 rootProject.name = "Home-Launcher"
-include(":App")
+include(":app")
